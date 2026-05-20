@@ -1,14 +1,10 @@
 # Legal-Skills-Chinese · 中文法律技能库
 
-> 面向中国大陆法域的法律推理技能集（Agent Skills）。38 个技能，覆盖法律检索、事实与要素处理、法律解释、法律推理、论证组织、风险评估与文书事务管理的完整链条。
->
-> A suite of Chinese-language legal reasoning skills for the **Mainland China** legal system. 38 skills spanning retrieval, fact extraction, interpretation, reasoning, argumentation, risk assessment, and document/case management.
+> 面向中国大陆法域的法律推理技能集（Agent Skills）。共 38 个技能，覆盖法律检索、事实与要素处理、法律解释、法律推理、论证组织、风险评估与文书事务管理的完整链条。
 
 ---
 
-## ⚠️ 免责声明 / Disclaimer
-
-**中文**
+## ⚠️ 免责声明
 
 本技能库是辅助法律工作者进行分析的工具，**不提供法律意见、不构成法律结论、不能替代律师**。每一项技能的输出都应被视为**供执业法律专业人员审阅的草稿**，而非可直接对外使用或据以作出决定的成果。
 
@@ -16,53 +12,38 @@
 - 本库默认面向**中国大陆成文法体系**。在成文法体系下，案例不具有普遍约束力（最高人民法院指导性案例除外）；类比推理在刑法定罪量刑、税法课税要件等领域受严格限制甚至禁止。涉及其他法域（港澳台、普通法系等）时，使用者必须自行调整相应技能的法律前提。
 - AI 生成的推理与结论可能存在偏差、遗漏或过时。**最终的法律判断必须由具备执业资格的法律专业人员作出，并由其承担相应责任。**
 
-**English**
-
-These skills are tools that help legal professionals analyze issues. They **do not provide legal advice, do not constitute a legal conclusion, and are not a substitute for a lawyer**. Every output should be treated as a **draft for review by a qualified legal professional**, not as work product that can be relied on or sent as-is.
-
-- Checklists, frameworks, risk flags, and characterizations of statutes or case law are aids to the reviewing professional's own analysis — not statements of this project's view of the law.
-- The library assumes the **Mainland China civil-law (statutory) system**, in which prior cases are not generally binding (with the exception of the Supreme People's Court's Guiding Cases), and analogical reasoning is strictly limited or prohibited in areas such as criminal conviction/sentencing and tax. For other jurisdictions, you must adjust each skill's legal assumptions yourself.
-- AI-generated reasoning may be biased, incomplete, or out of date. **Final legal judgment must be made by, and remains the responsibility of, a qualified legal professional.**
-
 ---
 
-## 设计理念 / Design
+## 设计理念
 
 这套技能库不是一堆零散的提示词，而是一个**分层的法律推理体系**：
 
-This is not a bag of prompts — it is a **layered legal-reasoning system**:
-
-- **原子能力（Atomic skills, ×36）** — 每个技能只做一件事：检索一条法条、提取一组要素、完成一次演绎、评估一段论证的强度。它们是可独立调用、可相互组合的最小单元。
-  *Each does one thing — retrieve a statute, extract elements, run one deduction, score one argument's strength — and can be called or composed independently.*
-- **复合能力（Composite skills, ×2）** — `judgment-document-generation`（裁判文书生成）和 `legal-judgment-prediction`（法律判决预测）是**编排层**，它们按固定主线调度多个原子能力（事实提取 → 概念理解 → 争议识别 → 法条检索 → 案例检索 → 演绎推理 → 格式适用 → 术语规范），完成端到端的复杂任务。
-  *Two orchestration skills that sequence the atomic skills end-to-end for complex deliverables.*
+- **原子能力（36 个）**——每个技能只做一件事：检索一条法条、提取一组要素、完成一次演绎、评估一段论证的强度。它们是可独立调用、可相互组合的最小单元。
+- **复合能力（2 个）**——`judgment-document-generation`（裁判文书生成）和 `legal-judgment-prediction`（法律判决预测）是**编排层**，它们按固定主线调度多个原子能力（事实提取 → 概念理解 → 争议识别 → 法条检索 → 案例检索 → 演绎推理 → 格式适用 → 术语规范），完成端到端的复杂任务。
 
 每个技能（`SKILL.md`）都自带：触发条件、能力边界、操作步骤、输入/输出格式，以及一段法律声明。复合能力会显式说明它调用了哪些原子能力以及调用顺序。
 
-Every `SKILL.md` carries its own trigger conditions, scope, step-by-step instructions, I/O format, and a legal disclaimer. Composite skills document which atomic skills they call and in what order.
-
 ---
 
-## 技能分类 / Skill Categories
+## 技能分类
 
 38 个技能按功能分为 7 类：
 
-| # | 类别 / Category | 数量 | 技能 |
+| # | 类别 | 数量 | 技能 |
 |---|---|:---:|---|
-| 一 | **信息检索** Retrieval | 5 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` |
-| 二 | **事实与要素处理** Fact & Element | 4 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
-| 三 | **法律解释** Interpretation | 4 | `legal-interpretation-argument` · `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` |
-| 四 | **法律推理** Reasoning | 7 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` |
-| 五 | **论证组织与评估** Argumentation | 4 | `argument-chain-construction` · `argument-strength-evaluation` · `evidence-argument-chain` · `strategic-risk-prioritization` |
-| 六 | **风险评估与价值判断** Risk & Value | 6 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction`✦ |
-| 七 | **文书与事务管理** Document & Practice | 8 | `legal-document-formatting` · `judgment-document-generation`✦ · `legal-document-summarization` · `multi-document-summarization` · `legal-terminology` · `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` |
+| 一 | **信息检索** | 5 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` |
+| 二 | **事实与要素处理** | 4 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
+| 三 | **法律解释** | 4 | `legal-interpretation-argument` · `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` |
+| 四 | **法律推理** | 7 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` |
+| 五 | **论证组织与评估** | 4 | `argument-chain-construction` · `argument-strength-evaluation` · `evidence-argument-chain` · `strategic-risk-prioritization` |
+| 六 | **风险评估与价值判断** | 6 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction`✦ |
+| 七 | **文书与事务管理** | 8 | `legal-document-formatting` · `judgment-document-generation`✦ · `legal-document-summarization` · `multi-document-summarization` · `legal-terminology` · `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` |
 
 > ✦ 标记为**复合能力**。`legal-judgment-prediction` 和 `judgment-document-generation` 在功能上分别归入「风险评估/预测」与「文书」类，但实现上是调度其他原子能力的编排层。
-> ✦ marks **composite** (orchestration) skills.
 
 ---
 
-## 技能清单 / Skill Index
+## 技能清单
 
 | 技能目录 (slug) | 中文名 | 一句话说明 |
 |---|---|---|
@@ -107,30 +88,28 @@ Every `SKILL.md` carries its own trigger conditions, scope, step-by-step instruc
 
 ---
 
-## 覆盖的评测任务 / Benchmark Coverage
+## 覆盖的评测任务
 
 这套技能库的设计参照了中文法律 NLP 的主流评测基准。下表将常见 benchmark 任务映射到对应的技能，说明本库能覆盖哪些标准任务。
 
-The skills are designed against mainstream Chinese legal-NLP benchmarks. The table maps common benchmark tasks to the skills that address them.
-
-### LexEval（6 个认知维度 / 6 cognitive dimensions）
+### LexEval
 
 | 认知维度 | 代表任务 | 对应技能 |
 |---|---|---|
-| Memorization 记忆 | 法律概念、法条、法律演变 | `legal-concept-comprehension` · `legal-article-retrieval` · `legal-norm-validity-check` |
-| Understanding 理解 | 法律关系/要素/争议焦点识别、文书摘要 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `legal-document-summarization` |
-| Logic Inference 推理 | 法条适用/罪名/刑期预测、多跳推理、类案识别 | `deductive-reasoning` · `formal-legal-consequence` · `legal-judgment-prediction`✦ · `case-retrieval` |
-| Discrimination 判别 | 文书校对、咨询回答质量评估 | `argument-strength-evaluation` · `evidence-evaluation` |
-| Generation 生成 | 文书生成、论辩挖掘、阅读理解 | `legal-document-formatting` · `judgment-document-generation`✦ · `argument-chain-construction` |
-| Ethic 伦理 | 法律伦理判断、偏见检测、隐私/歧视识别 | `judicial-value-judgment` · `administrative-value-judgment` |
+| 记忆 Memorization | 法律概念、法条、法律演变 | `legal-concept-comprehension` · `legal-article-retrieval` · `legal-norm-validity-check` |
+| 理解 Understanding | 法律关系/要素/争议焦点识别、文书摘要 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `legal-document-summarization` |
+| 推理 Logic Inference | 法条适用/罪名/刑期预测、多跳推理、类案识别 | `deductive-reasoning` · `formal-legal-consequence` · `legal-judgment-prediction`✦ · `case-retrieval` |
+| 判别 Discrimination | 文书校对、咨询回答质量评估 | `argument-strength-evaluation` · `evidence-evaluation` |
+| 生成 Generation | 文书生成、论辩挖掘、阅读理解 | `legal-document-formatting` · `judgment-document-generation`✦ · `argument-chain-construction` |
+| 伦理 Ethic | 法律伦理判断、偏见检测、隐私/歧视识别 | `judicial-value-judgment` · `administrative-value-judgment` |
 
-### LawBench（3 个认知层次 / 3 levels）
+### LawBench
 
 | 认知层次 | 代表任务 | 对应技能 |
 |---|---|---|
-| 知识记忆 Memory | 法条背诵、知识问答 | `legal-article-retrieval` · `legal-concept-comprehension` |
-| 知识理解 Understanding | 文件校对、纠纷焦点识别、命名实体识别、事件检测、舆情摘要、论点挖掘 | `dispute-issue-identification` · `legal-element-extraction` · `legal-document-summarization` · `evidence-argument-chain` |
-| 知识应用 Application | 法条/罪名/刑期预测、案例分析、犯罪金额计算、法律咨询 | `legal-judgment-prediction`✦ · `formal-legal-consequence` · `deductive-reasoning` |
+| 知识记忆 | 法条背诵、知识问答 | `legal-article-retrieval` · `legal-concept-comprehension` |
+| 知识理解 | 文件校对、纠纷焦点识别、命名实体识别、事件检测、舆情摘要、论点挖掘 | `dispute-issue-identification` · `legal-element-extraction` · `legal-document-summarization` · `evidence-argument-chain` |
+| 知识应用 | 法条/罪名/刑期预测、案例分析、犯罪金额计算、法律咨询 | `legal-judgment-prediction`✦ · `formal-legal-consequence` · `deductive-reasoning` |
 
 ### CAIL（2018–2025）
 
@@ -146,34 +125,33 @@ The skills are designed against mainstream Chinese legal-NLP benchmarks. The tab
 | 法律数值计算（涉案金额/赔偿/利息） | `formal-legal-consequence` · `billing-and-litigation-budget` |
 | 文书校对 / 事实认定 | `argument-strength-evaluation` · `legal-element-extraction` |
 
-### 其他基准 / Other benchmarks
+### 其他基准
 
-| Benchmark | 主要任务 | 对应技能 |
+| 基准 | 主要任务 | 对应技能 |
 |---|---|---|
-| **JEC-QA** (AAAI 2020) | 司法考试知识/案例问答 | `legal-concept-comprehension` · `deductive-reasoning` |
-| **LeCaRD / v2** (SIGIR 2021/2024) | 法律案例检索（排序） | `case-retrieval` · `analogical-reasoning` |
-| **MSLR** (2025) | 基于 IRAC 的多步法律推理 | `deductive-reasoning` · `argument-chain-construction` |
-| **LAiW** (COLING 2025) | 基于三段论的 NLU/推理/生成 | `deductive-reasoning` · `formal-legal-consequence` |
-| **JuDGE** (SIGIR 2025) | 从事实生成完整判决书 | `judgment-document-generation`✦ |
-| **CLAW** (2025) | 条/款/项三级法条检索与分析 | `legal-article-retrieval` · `legal-norm-validity-check` |
-| **LeKUBE** (2024) | 法律知识更新追踪 | `legal-norm-validity-check` |
-| **LEVEN** (ACL 2022) | 法律事件检测、触发词识别 | `legal-element-extraction` |
-| **AR-Bench** (2026) | 判决错误检测/分类/纠正 | `argument-strength-evaluation` · `evidence-evaluation` |
+| **JEC-QA**） | 司法考试知识/案例问答 | `legal-concept-comprehension` · `deductive-reasoning` |
+| **LeCaRD / v2** | 法律案例检索（排序） | `case-retrieval` · `analogical-reasoning` |
+| **MSLR** | 基于 IRAC 的多步法律推理 | `deductive-reasoning` · `argument-chain-construction` |
+| **LAiW** | 基于三段论的 NLU/推理/生成 | `deductive-reasoning` · `formal-legal-consequence` |
+| **JuDGE** | 从事实生成完整判决书 | `judgment-document-generation`✦ |
+| **CLAW** | 条/款/项三级法条检索与分析 | `legal-article-retrieval` · `legal-norm-validity-check` |
+| **LeKUBE** | 法律知识更新追踪 | `legal-norm-validity-check` |
+| **LEVEN** | 法律事件检测、触发词识别 | `legal-element-extraction` |
+| **AR-Bench** | 判决错误检测/分类/纠正 | `argument-strength-evaluation` · `evidence-evaluation` |
 | **LegalAgentBench / J1-EVAL** | Agent 多步推理、工具调用、过程合规 | `legal-judgment-prediction`✦ · `conflict-resolution` · `strategic-risk-prioritization` |
 
 > 覆盖说明：上表反映的是**方法论层面**的对应关系，即本库提供了完成该类任务所需的分析框架与步骤，并不代表已在相应数据集上做过定量评测或达到某一分数。
-> Note: the mapping reflects **methodological** coverage — the analytical frameworks needed for each task type — not quantitative scores on those datasets.
 
 ---
 
-## 目录结构 / Repository Structure
+## 目录结构
 
 ```
 Legal-Skills-Chinese/
 ├── README.md
-├── <skill-name>/
+├── <技能名>/
 │   └── SKILL.md          # 每个技能一个目录，一个 SKILL.md
-├── <skill-name>/
+├── <技能名>/
 │   └── SKILL.md
 └── ...                   # 共 38 个技能目录
 ```
@@ -190,11 +168,9 @@ description: |            # 触发条件、适用场景、能力边界
 
 ---
 
-## 使用方式 / Usage
+## 使用方式
 
 这些技能遵循 Anthropic Agent Skills 的 `SKILL.md` 约定，可在支持该格式的环境中使用（如 Claude Cowork、Claude Code，或任何兼容 Anthropic skill 格式的工具）。
-
-These follow the Anthropic Agent Skills `SKILL.md` convention and work in any tool that supports the format (Claude Cowork, Claude Code, etc.).
 
 **基本流程：**
 
@@ -205,16 +181,14 @@ These follow the Anthropic Agent Skills `SKILL.md` convention and work in any to
 
 ---
 
-## 命名与规范 / Conventions
+## 命名与规范
 
 - 技能目录名与 `name` 字段统一为小写连字符 slug（`^[a-z0-9][a-z0-9-]+$`）。
-- 中文显示名见上方[技能清单](#技能清单--skill-index)。
+- 中文显示名见上方[技能清单](#技能清单)。
 - 每个 `SKILL.md` 均含 `name` + `description` frontmatter，并在正文给出触发条件、步骤、输入/输出格式与法律声明。
 
 ---
 
-## 许可与责任 / License & Responsibility
+## 许可与责任
 
 本项目仅供法律研究与实务辅助之用。使用者须确保其使用方式符合所在法域对法律服务、执业资格与人工智能应用的相关规定。**任何对外的法律工作成果，其专业责任由使用该成果的执业人员承担，而非本项目或本项目的贡献者。**
-
-For legal research and practice-support use only. Users are responsible for ensuring their use complies with applicable rules on legal services, professional licensing, and AI in their jurisdiction. **Professional responsibility for any work product rests with the practitioner who uses it — not with this project or its contributors.**
