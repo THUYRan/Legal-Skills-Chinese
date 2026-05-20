@@ -1,5 +1,5 @@
 ---
-name: 裁判文书生成_8skills
+name: judgment-document-generation
 description: 根据案件事实描述，协调调用8个原子能力，生成格式规范、论证严密的完整刑事判决书。涵盖事实认定、法律适用、量刑推理及文书输出全流程。
 ---
 

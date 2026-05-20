@@ -1,5 +1,5 @@
 ---
-name: 庭审排期与程序时限监控
+name: trial-scheduling-and-deadline-monitoring
 description: |
   当用户需要跟踪、被提醒案件的开庭排期、执行排期、证据提交期限、上诉期限、送达期限、保全续保等各项法定期限时，使用此技能。
   典型触发场景包括但不限于：

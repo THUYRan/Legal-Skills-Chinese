@@ -1,5 +1,5 @@
 ---
-name: 类比推理
+name: analogical-reasoning
 description: |
   当AI智能体需要处理以下情形时触发本技能：
   1. 当前案件/问题在现行法律中没有直接、明确的规定（法律漏洞）；

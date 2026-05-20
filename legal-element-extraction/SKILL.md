@@ -1,5 +1,5 @@
 ---
-name: 法律核心要素提取
+name: legal-element-extraction
 description: |
   当需要从案件描述、当事人陈述、聊天记录、媒体报道等非结构化文本中提取具有法律意义的事实时触发此技能。
   典型触发场景包括但不限于：

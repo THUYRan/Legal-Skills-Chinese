@@ -1,5 +1,5 @@
 ---
-name: 法律概念理解
+name: legal-concept-comprehension
 description: |
   当用户要求解释、辨析、拆解或理解某个法律概念时触发此技能。
   典型触发场景包括但不限于：

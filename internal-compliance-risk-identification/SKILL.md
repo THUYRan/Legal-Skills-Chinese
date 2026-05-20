@@ -1,5 +1,5 @@
 ---
-name: 内部合规风险识别
+name: internal-compliance-risk-identification
 description: |
   当需要对企业内部的合规管理体系进行系统性审查，识别制度缺漏、流程缺陷和数据隐私合规风险时触发此技能。
   典型触发场景包括但不限于：

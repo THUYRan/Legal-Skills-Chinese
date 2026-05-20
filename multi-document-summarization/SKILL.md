@@ -1,5 +1,5 @@
 ---
-name: 多源文档归纳
+name: multi-document-summarization
 description: |
   当需要对多份相关文档进行综合分析、提取共同观点、识别冲突并生成统一概览时触发此技能。
   典型触发场景包括但不限于：

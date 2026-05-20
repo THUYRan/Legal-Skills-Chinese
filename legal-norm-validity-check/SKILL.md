@@ -1,5 +1,5 @@
 ---
-name: 法律规范效力检查
+name: legal-norm-validity-check
 description: |
   当AI智能体在法律推理过程中检索到具体法律条文后，需要对该法条进行效力验证时触发此技能。
   触发条件包括但不限于：

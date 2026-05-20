@@ -1,5 +1,5 @@
 ---
-name: 运用法律解释论证
+name: legal-interpretation-argument
 description: |
   当法律推理过程中遇到以下情形时触发本技能：
   （1）法条文本含义模糊、存在多种理解可能；

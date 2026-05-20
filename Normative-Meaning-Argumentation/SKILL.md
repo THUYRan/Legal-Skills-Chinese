@@ -1,5 +1,5 @@
 ---
-name: 规范意义论证 
+name: normative-meaning-argumentation
 description: |
   分析法律规范的目的、价值导向，以及事实应如何进入规范评价，判断涵摄的限度，需要适当区别于法律解释中的规范目的解释。
 ---

@@ -1,5 +1,5 @@
 ---
-name: 法律摘要
+name: legal-document-summarization
 description: |
   当需要对判决书、裁定书、调解书、仲裁裁决书、行政处罚决定书等法律文书进行结构化摘要时触发此技能。
   典型触发场景包括但不限于：
