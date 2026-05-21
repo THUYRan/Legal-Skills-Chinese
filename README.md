@@ -1,6 +1,8 @@
 # Legal-Skills-Chinese · 中文法律技能库
 
 > 面向中国大陆法域的法律推理技能集（Agent Skills）。共 38 个技能，覆盖法律检索、事实与要素处理、法律解释、法律推理、论证组织、风险评估与文书事务管理的完整链条。
+>
+> 这些技能均由执业法律专业人员（legal professionals）逐一手写并验证，力求精确贴合中国法律的推理逻辑与实务规范，而非由模型自动生成的泛化提示词。
 
 ---
 
@@ -43,48 +45,49 @@
 
 ---
 
-## 技能清单
+## 技能清单与能力地图
 
-| 技能目录 (slug) | 中文名 | 一句话说明 |
+下表把 38 个技能放回它们所属的**法律工作能力维度**中，并补充每个维度背后的**理论依据（法理学/逻辑学）**与**可参考的工具、文献**。维度按法律工作的「输入 → 处理 → 输出」三层组织。
+
+> 说明：本表只收录**已实现为 `SKILL.md` 的技能**。原始能力框架中尚有若干设想中的维度与子能力（如知识库/法条库构建、客户沟通与澄清式发问、危机预案与多场景模拟等）尚未落地，故未列入；待补齐后再行收录。
+
+### 一、输入层 · 读懂事实与找到规范
+
+| 能力维度 | 对应技能 (slug) | 理论依据 | 可参考工具 / 文献 |
+|---|---|---|---|
+| **法律解析**（理解事实、识别要素与法律关系） | `legal-element-extraction` · `structured-element-extraction` · `legal-concept-comprehension` · `dispute-issue-identification` | 认识论为事实认定提供哲学基础；言语行为理论（说话即做事——承诺、命令、宣告）帮助识别当事人话语背后的真实目的，而非只看表面 | Lex Machina（大数据驱动的法律信息分析，lexmachina.com）；论文 arxiv.org/abs/2410.21306 |
+| **法律检索**（找到现行有效、层级正确的规范与案例） | `legal-article-retrieval` · `case-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` | 法律渊源理论研究法律的表现形式与效力等级（宪法/法律/行政法规孰高孰低）；规范层级理论将法律视为动态层级体系，下位法不得抵触上位法，是解决法条冲突的基础 | Westlaw Edge（westlaw.com） |
+
+### 二、处理层 · 调查、评估、推理与判断
+
+| 能力维度 | 对应技能 (slug) | 理论依据 | 可参考工具 / 文献 |
+|---|---|---|---|
+| **法律调查**（核查证据真实性、可采性与证明力） | `evidence-evaluation` | 证据可采性理论研究何种证据能被法庭接受，涵盖相关性、真实性、合法性等标准 | JusticeText（视频证据，justicetext.com）；Luminance（luminance.com）；Litera Kira（litera.com/products/kira）；实务文 revealdata.com（法律团队如何应对 AI 生成文件与深度伪造证据） |
+| **法律风险评估**（识别、量化并分级法律风险） | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` | 规范体系论、构成要件理论、程序法理论、风险评估理论、预防原则、决策理论，以及演绎/归纳/类比逻辑推理 | LegalOn（合同审核，legalontech.com）；Darrow（法律风险预测，darrow.ai） |
+| **法律推理**（演绎、归纳、类比、溯因、反事实及冲突处理） | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` | 基于案例的推理（case-based，比对当前案件与先例异同）与基于规则的推理（rule-based，三段论映射）；输入-输出逻辑形式化规范的条件结构；可废止道义逻辑结合道义逻辑（义务/许可/禁止）与可废止逻辑（允许例外推翻一般规则）处理规则与例外；可能世界语义学用于评估假设情形下的法律后果 | Prolog 法律推理系统；论文 arxiv.org/html/2506.08899v1、link.springer.com/chapter/10.1007/978-3-031-35254-6_23 |
+| **价值判断**（在不确定与价值冲突中作可审查的裁量） | `judicial-value-judgment` · `administrative-value-judgment` | 法哲学（自然法、实证主义、现实主义对法律本质与正当性的不同主张）；价值衡量原则（在冲突权利/原则间权衡，越重要的利益越需严格保护）；比例原则（适当性、必要性、均衡性三阶）；公共利益理论 | 参见 Google Scholar 相关研究索引 |
+| **法律归纳**（对大量材料作结构化摘要与跨源综合） | `legal-document-summarization` · `multi-document-summarization` | 法律信息降维与压缩理论（在保持信息完整的前提下降低复杂度）；法律论证结构理论（主张、根据、保证、支援、限定、反驳等要素）为提取关键论点提供框架 | LexisNexis Headnotes / Lexis+（自动判决摘要、争点提取）；Westlaw KeyCite / Headnotes；论文 mdpi.com/2073-8994/17/5/633 |
+| **法律流程管理**（案件全周期、排期时限与预算控制） | `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` | 运筹学与调度理论（优化排期、资源分配、任务依赖）；程序法对程序时限、证据准备、庭审组织的专业要求 | Clio（clio.com）、Streamline AI、MyCase、Litify、Wrike 等案件管理产品；CoCounsel Legal（thomsonreuters.com）；KPI 参考 streamline.ai、swiftwaterco.com |
+
+### 三、输出层 · 论证、解释与文书
+
+| 能力维度 | 对应技能 (slug) | 理论依据 | 可参考工具 / 文献 |
+|---|---|---|---|
+| **法律论证**（构建论证链、攻防对方论点、评估强度） | `argument-chain-construction` · `evidence-argument-chain` · `argument-strength-evaluation` · `legal-interpretation-argument` | Dung 抽象论辩框架（以有向图表示论证间的攻击关系，定义可接受性语义，为量化论证强度提供形式化基础）；论证图式（每种模式附带批判性问题）；Toulmin 论证模型（六要素，强调语境依赖与可废止性） | Clearbrief（clearbrief.com）；论文 arxiv.org/html/2412.11617v1 |
+| **法律解释**（文义、体系、目的解释及通俗化表达） | `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` | 法律解释学（理解是解释者与文本的视域融合，强调历史性、语言性、实践性）；法教义学以现行有效法律为对象，通过概念分析与体系建构发展法律；文义/体系/目的解释构成有优先级的方法层级 | 参考研究 Jurex-4E |
+| **法律策略**（战略层面的风险优先级与资源取舍） | `strategic-risk-prioritization` | 多属性效用决策理论（将偏好表示为多属性效用函数，处理冲突目标间权衡）；战略运筹学；决策理论（期望效用、前景理论） | Lex Machina（lexmachina.com）；CoCounsel 策略分析；实务文 opus2.com/ai-for-legal-case-strategy |
+| **法律文书写作**（格式适用与术语规范） | `legal-document-formatting` · `legal-terminology` | 言语行为理论确保文书的言外行为效力准确（合同条款产生约束力、诉状启动诉讼）；AGM 信念修正理论形式化知识库的扩张/收缩/修正三种操作；规范变更逻辑研究规范的创设、修改、废止与溯及力 | Spellbook、Briefpoint、Clio Draft、Legalyze.ai、Luminance；论文《Normative Change: An AGM Approach》 |
+
+### 复合能力（编排层）
+
+| 技能 (slug) | 中文名 | 说明 |
 |---|---|---|
-| `legal-element-extraction` | 法律核心要素提取 | 把日常/情绪化叙事转化为可进入法律推理的事实结构 |
-| `structured-element-extraction` | 结构化要素清单 | 分析前的「质量闸门」，确保要素提取完整无遗漏 |
-| `legal-concept-comprehension` | 法律概念理解 | 解释、辨析、拆解法律概念，判断事实是否构成某概念 |
-| `legal-terminology` | 法律术语规范表达 | 将生活语言转化为准确、无歧义的法律术语 |
-| `case-retrieval` | 案例检索 | 查找类似案例与相关判决，输出结构化检索报告 |
-| `legal-article-retrieval` | 法条检索 | 生成标准化法律检索报告，含法源位阶与效力甄别 |
-| `other-legal-retrieval` | 其他检索 | 检索立法背景、监管案例、地方指导意见等辅助信息 |
-| `legal-norm-validity-check` | 法律规范效力检查 | 验证所引法条是否现行有效、层级正确、无冲突 |
-| `dispute-issue-identification` | 争议焦点识别 | 从事实中提炼争议焦点，区分事实争议与法律争议 |
-| `evidence-evaluation` | 证据效力评估 | 评估证据「三性」与证明力，识别非法证据 |
-| `legal-interpretation-argument` | 运用法律解释论证 | 综合文义/体系/目的解释，对关键法条作解释论证 |
-| `systematic-interpretation` | 体系解释 | 依据规范在法律体系中的位置作最符合体系的解释 |
-| `teleological-interpretation` | 目的解释 | 发现并论证条文目的，在文本可承受范围内择最正当含义 |
-| `normative-meaning-argumentation` | 规范意义论证 | 论证规范为何能评价特定事实及评价限度，建立涵摄链条 |
-| `deductive-reasoning` | 演绎推理 | 基于形式逻辑构建可检验的三段论（P-F-C）论证链 |
-| `inductive-reasoning` | 归纳推理 | 从具体案例提炼一般性裁判规则，附置信度与适用边界 |
-| `analogical-reasoning` | 类比推理 | 「相似案件相似处理」，论证类比正当性（注意类推禁区） |
-| `legal-abductive-reasoning` | 法律溯因推理 | 证据不完整时生成并检验最合理的解释性假设 |
-| `counterfactual-reasoning` | 反事实推理 | But-for 检验，判断目标变量对法律结果的贡献 |
-| `formal-legal-consequence` | 形式化推导法律后果 | 从要件满足推导赔偿数额、刑期、处罚等量化后果 |
-| `conflict-resolution` | 冲突解决与优先级判定 | 处理法条竞合、证据矛盾、争点排序、法源冲突 |
-| `argument-chain-construction` | 构建论证链条 | 将分散推理要素组织为完整自洽的论证结构 |
-| `argument-strength-evaluation` | 评估论证强度 | 对推理结论作置信度评级，标注薄弱环节 |
-| `evidence-argument-chain` | 组织证据论证链 | 建立「主张→要件→证据→证明力」的完整映射 |
-| `strategic-risk-prioritization` | 战略层面风险优先级排序 | 按概率×影响对多个风险/结论排序，支撑资源配置 |
-| `dispute-and-performance-risk` | 识别争议与履约风险 | 审查合同/交易，前瞻识别纠纷与违约风险 |
-| `internal-compliance-risk-identification` | 内部合规风险识别 | 审查制度完整性、流程控制有效性、个人信息保护合规 |
-| `legal-risk-assessment` | 识别外部监管风险 | 从许可资质、法规遵循、历史处罚等维度评估监管风险 |
-| `judicial-value-judgment` | 司法价值判断 | 辅助法官在疑难案件中作可审查、可论证的价值衡量 |
-| `administrative-value-judgment` | 行政价值判断 | 辅助行政人员按行政法原则作裁量与利益衡量 |
-| `legal-document-formatting` | 法律文书格式适用 | 将案卷转化为格式合规的民事/刑事裁判文书 |
-| `legal-document-summarization` | 法律摘要 | 对判决/裁定/调解/仲裁/行政处罚文书作结构化摘要 |
-| `multi-document-summarization` | 多源文档归纳 | 跨多份文档作关联分析，识别共性与差异 |
-| `case-lifecycle-planning` | 案件全周期规划 | 生成案件诉讼路线图与关键时间一览表 |
-| `trial-scheduling-and-deadline-monitoring` | 庭审排期与程序时限监控 | 跟踪开庭、举证、上诉、送达等法定期限 |
-| `billing-and-litigation-budget` | 工时计费与诉讼预算控制 | 管理工时与费用，编制并监控诉讼预算 |
-| `judgment-document-generation`✦ | 裁判文书生成 | **复合**：调度 8 个原子能力生成完整刑事判决书 |
-| `legal-judgment-prediction`✦ | 法律判决预测 | **复合**：调度 8 个原子能力预测罪名、法条、刑期 |
+| `legal-judgment-prediction`✦ | 法律判决预测 | 调度 8 个原子能力（要素提取 → 概念理解 → 争议识别 → 法条检索 → 案例检索 → 演绎推理 → 格式适用 → 术语规范），预测罪名、适用法条、刑期与量刑情节；理论上对应 LJP 与多跳推理（multi-hop reasoning） |
+| `judgment-document-generation`✦ | 裁判文书生成 | 调度同一组原子能力，生成完整刑事判决书 |
+
+> ✦ 标记为**复合能力**：它们本身不引入新的原子能力，而是按固定主线调度上表中的原子技能完成端到端任务。
+>
+> 综合性参考产品（覆盖多维能力）：Harvey AI（harvey.ai）、Lexis+ AI、CoCounsel（cocounsel.com）、Clio（clio.com）。
 
 ---
 
