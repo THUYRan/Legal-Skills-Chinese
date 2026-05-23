@@ -83,15 +83,15 @@
 
 38 个技能按功能分为 **7 类**,对应法律工作的「输入 → 处理 → 输出」三层。
 
-| # | 类别 | 数量 | 技能 |
-|:---:|:---|:---:|:---|
-| 01 | **信息检索** | 5 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` |
-| 02 | **事实与要素处理** | 4 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
-| 03 | **法律解释** | 4 | `legal-interpretation-argument` · `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` |
-| 04 | **法律推理** | 7 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` |
-| 05 | **论证组织与评估** | 4 | `argument-chain-construction` · `argument-strength-evaluation` · `evidence-argument-chain` · `strategic-risk-prioritization` |
-| 06 | **风险评估与价值判断** | 6 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction` ✦ |
-| 07 | **文书与事务管理** | 8 | `legal-document-formatting` · `judgment-document-generation` ✦ · `legal-document-summarization` · `multi-document-summarization` · `legal-terminology` · `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` |
+| 类别 | <span style="white-space:nowrap">数量</span> | 技能 |
+|:---|:---:|:---|
+| <span style="white-space:nowrap">**01 · 信息检索**</span> | 5 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` |
+| <span style="white-space:nowrap">**02 · 事实与要素处理**</span> | 4 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
+| <span style="white-space:nowrap">**03 · 法律解释**</span> | 4 | `legal-interpretation-argument` · `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` |
+| <span style="white-space:nowrap">**04 · 法律推理**</span> | 7 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` |
+| <span style="white-space:nowrap">**05 · 论证组织与评估**</span> | 4 | `argument-chain-construction` · `argument-strength-evaluation` · `evidence-argument-chain` · `strategic-risk-prioritization` |
+| <span style="white-space:nowrap">**06 · 风险评估与价值判断**</span> | 6 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction` ✦ |
+| <span style="white-space:nowrap">**07 · 文书与事务管理**</span> | 8 | `legal-document-formatting` · `judgment-document-generation` ✦ · `legal-document-summarization` · `multi-document-summarization` · `legal-terminology` · `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` |
 
 > ✦ 标记为**复合能力**:`legal-judgment-prediction` 与 `judgment-document-generation` 在功能上分别归入「风险评估/预测」与「文书」类,但实现上是调度其他原子能力的编排层。
 
@@ -103,15 +103,25 @@
 
 > **理论依据** 法律渊源理论(法律的表现形式与效力等级)· 规范层级理论(下位法不得抵触上位法)· 言语行为理论(识别话语背后的真实目的) — **参考** [Westlaw Edge](https://westlaw.com) · [Lex Machina](https://lexmachina.com)
 
-[<img src="./assets/tag-case-retrieval.svg" alt="case-retrieval" height="30">](./skills/case-retrieval) — 查找与当前法律问题相关的类似案例、相关判决与裁判规则,支撑论点、预判结果、对比裁判立场。
+[<img src="./assets/tag-case-retrieval.svg" alt="case-retrieval" height="30">](./skills/case-retrieval)
 
-[<img src="./assets/tag-legal-article-retrieval.svg" alt="legal-article-retrieval" height="30">](./skills/legal-article-retrieval) — 生成标准化法律检索报告,复核法律依据有效性,确认请求权/抗辩主张的法律依据,分析司法实践倾向。
+查找与当前法律问题相关的类似案例、相关判决与裁判规则,支撑论点、预判结果、对比裁判立场。
 
-[<img src="./assets/tag-other-legal-retrieval.svg" alt="other-legal-retrieval" height="30">](./skills/other-legal-retrieval) — 检索法条/司法解释/典型案例之外的辅助信息:立法背景、监管案例、地方指导意见、行业标准、学术通说、域外比较等。
+[<img src="./assets/tag-legal-article-retrieval.svg" alt="legal-article-retrieval" height="30">](./skills/legal-article-retrieval)
 
-[<img src="./assets/tag-legal-norm-validity-check.svg" alt="legal-norm-validity-check" height="30">](./skills/legal-norm-validity-check) — 对检索到的法条进行效力验证:现行有效、层级正确、与上位法及同位法无冲突,保障推理结论可靠。
+生成标准化法律检索报告,复核法律依据有效性,确认请求权/抗辩主张的法律依据,分析司法实践倾向。
 
-[<img src="./assets/tag-legal-concept-comprehension.svg" alt="legal-concept-comprehension" height="30">](./skills/legal-concept-comprehension) — 解释、辨析、拆解法律概念,分析构成要件与法律效果,是法律分析的基础单元。
+[<img src="./assets/tag-other-legal-retrieval.svg" alt="other-legal-retrieval" height="30">](./skills/other-legal-retrieval)
+
+检索法条/司法解释/典型案例之外的辅助信息:立法背景、监管案例、地方指导意见、行业标准、学术通说、域外比较等。
+
+[<img src="./assets/tag-legal-norm-validity-check.svg" alt="legal-norm-validity-check" height="30">](./skills/legal-norm-validity-check)
+
+对检索到的法条进行效力验证:现行有效、层级正确、与上位法及同位法无冲突,保障推理结论可靠。
+
+[<img src="./assets/tag-legal-concept-comprehension.svg" alt="legal-concept-comprehension" height="30">](./skills/legal-concept-comprehension)
+
+解释、辨析、拆解法律概念,分析构成要件与法律效果,是法律分析的基础单元。
 
 <br>
 
@@ -119,13 +129,21 @@
 
 > **理论依据** 认识论(事实认定的哲学基础)· 构成要件理论 · 证据可采性理论(相关性、真实性、合法性)
 
-[<img src="./assets/tag-legal-element-extraction.svg" alt="legal-element-extraction" height="30">](./skills/legal-element-extraction) — 从案件描述、聊天记录、媒体报道等非结构化文本中提取有法律意义的事实,将生活语言转化为法律语言。
+[<img src="./assets/tag-legal-element-extraction.svg" alt="legal-element-extraction" height="30">](./skills/legal-element-extraction)
 
-[<img src="./assets/tag-structured-element-extraction.svg" alt="structured-element-extraction" height="30">](./skills/structured-element-extraction) — 把法律问题/事实/条文分解为结构化要素清单,作为进入下游推理前的"质量闸门",确保无遗漏、可追溯。
+从案件描述、聊天记录、媒体报道等非结构化文本中提取有法律意义的事实,将生活语言转化为法律语言。
 
-[<img src="./assets/tag-dispute-issue-identification.svg" alt="dispute-issue-identification" height="30">](./skills/dispute-issue-identification) — 在要素提取之后从法律事实中提取争议焦点,排除无争议事项,将案件关系转化为法律关系问题。
+[<img src="./assets/tag-structured-element-extraction.svg" alt="structured-element-extraction" height="30">](./skills/structured-element-extraction) 
 
-[<img src="./assets/tag-evidence-evaluation.svg" alt="evidence-evaluation" height="30">](./skills/evidence-evaluation) — 对证据的真实性、合法性、关联性("三性")及证明力评估,判断可采性、证明标准、补强建议与非法证据排除。
+把法律问题/事实/条文分解为结构化要素清单,作为进入下游推理前的"质量闸门",确保无遗漏、可追溯。
+
+[<img src="./assets/tag-dispute-issue-identification.svg" alt="dispute-issue-identification" height="30">](./skills/dispute-issue-identification) 
+
+在要素提取之后从法律事实中提取争议焦点,排除无争议事项,将案件关系转化为法律关系问题。
+
+[<img src="./assets/tag-evidence-evaluation.svg" alt="evidence-evaluation" height="30">](./skills/evidence-evaluation)
+
+对证据的真实性、合法性、关联性("三性")及证明力评估,判断可采性、证明标准、补强建议与非法证据排除。
 
 <img src="./assets/rule.svg" alt="" width="100%">
 
@@ -135,13 +153,21 @@
 
 > **理论依据** 法律解释学(解释者与文本的视域融合)· 法教义学 · 文义/体系/目的解释构成有优先级的方法层级
 
-[<img src="./assets/tag-legal-interpretation-argument.svg" alt="legal-interpretation-argument" height="30">](./skills/legal-interpretation-argument) — 综合运用文义、体系、目的解释,对含义模糊或存在适用争议的关键法条进行严谨的解释论证。
+[<img src="./assets/tag-legal-interpretation-argument.svg" alt="legal-interpretation-argument" height="30">](./skills/legal-interpretation-argument)
 
-[<img src="./assets/tag-systematic-interpretation.svg" alt="systematic-interpretation" height="30">](./skills/systematic-interpretation) — 体系解释:依据规范在法律体系中的位置与关联规范,作出最符合体系性的解释。
+综合运用文义、体系、目的解释,对含义模糊或存在适用争议的关键法条进行严谨的解释论证。
 
-[<img src="./assets/tag-teleological-interpretation.svg" alt="teleological-interpretation" height="30">](./skills/teleological-interpretation) — 目的解释:当文义解释无法择一时,发现并论证条文目的,在文本可承受范围内选择最正当的含义。
+[<img src="./assets/tag-systematic-interpretation.svg" alt="systematic-interpretation" height="30">](./skills/systematic-interpretation)
 
-[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/Normative-Meaning-Argumentation) — 分析规范的目的与价值导向,判断事实如何进入规范评价及涵摄的限度。
+体系解释:依据规范在法律体系中的位置与关联规范,作出最符合体系性的解释。
+
+[<img src="./assets/tag-teleological-interpretation.svg" alt="teleological-interpretation" height="30">](./skills/teleological-interpretation)
+
+目的解释:当文义解释无法择一时,发现并论证条文目的,在文本可承受范围内选择最正当的含义。
+
+[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/Normative-Meaning-Argumentation)
+
+分析规范的目的与价值导向,判断事实如何进入规范评价及涵摄的限度。
 
 <br>
 
@@ -149,19 +175,33 @@
 
 > **理论依据** rule-based(三段论映射)与 case-based(比对先例异同)推理 · 输入-输出逻辑 · 可废止道义逻辑(义务/许可/禁止 + 例外推翻)· 可能世界语义学
 
-[<img src="./assets/tag-deductive-reasoning.svg" alt="deductive-reasoning" height="30">](./skills/deductive-reasoning) — 基于形式逻辑的严密演绎,将非结构化法律规范与事实转化为可检验的三段论链条(P-F-C)。
+[<img src="./assets/tag-deductive-reasoning.svg" alt="deductive-reasoning" height="30">](./skills/deductive-reasoning)
 
-[<img src="./assets/tag-inductive-reasoning.svg" alt="inductive-reasoning" height="30">](./skills/inductive-reasoning) — 从一个或多个具体案例、事实模式中提炼可推广的一般性法律规则、裁判规则或原则。
+基于形式逻辑的严密演绎,将非结构化法律规范与事实转化为可检验的三段论链条(P-F-C)。
 
-[<img src="./assets/tag-analogical-reasoning.svg" alt="analogical-reasoning" height="30">](./skills/analogical-reasoning) — 在法律漏洞情形下,识别相似性基础(tertium comparationis),论证类比正当性,得出结论。
+[<img src="./assets/tag-inductive-reasoning.svg" alt="inductive-reasoning" height="30">](./skills/inductive-reasoning)
 
-[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/Legal-Abductive-Reasoning) — 在证据不完整、事实模糊时生成并评估最合理的解释性假设;结合米尔五法进行结构化因果推断。
+从一个或多个具体案例、事实模式中提炼可推广的一般性法律规则、裁判规则或原则。
 
-[<img src="./assets/tag-counterfactual-reasoning.svg" alt="counterfactual-reasoning" height="30">](./skills/counterfactual-reasoning) — 评估"若某一事实/行为不存在,法律结果将如何不同",用于因果认定、责任比例、损害范围等。
+[<img src="./assets/tag-analogical-reasoning.svg" alt="analogical-reasoning" height="30">](./skills/analogical-reasoning)
 
-[<img src="./assets/tag-formal-legal-consequence.svg" alt="formal-legal-consequence" height="30">](./skills/formal-legal-consequence) — 推理链的终端:从已确认事实与已匹配规范推导具体法律后果(责任、赔偿额、刑期、处罚、合同效力)。
+在法律漏洞情形下,识别相似性基础(tertium comparationis),论证类比正当性,得出结论。
 
-[<img src="./assets/tag-conflict-resolution.svg" alt="conflict-resolution" height="30">](./skills/conflict-resolution) — 处理法条竞合、证据矛盾、争点优先级、法源冲突——几乎所有复杂法律分析都会触及的核心枢纽。
+[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/Legal-Abductive-Reasoning)
+
+在证据不完整、事实模糊时生成并评估最合理的解释性假设;结合米尔五法进行结构化因果推断。
+
+[<img src="./assets/tag-counterfactual-reasoning.svg" alt="counterfactual-reasoning" height="30">](./skills/counterfactual-reasoning)
+
+评估"若某一事实/行为不存在,法律结果将如何不同",用于因果认定、责任比例、损害范围等。
+
+[<img src="./assets/tag-formal-legal-consequence.svg" alt="formal-legal-consequence" height="30">](./skills/formal-legal-consequence)
+
+推理链的终端:从已确认事实与已匹配规范推导具体法律后果(责任、赔偿额、刑期、处罚、合同效力)。
+
+[<img src="./assets/tag-conflict-resolution.svg" alt="conflict-resolution" height="30">](./skills/conflict-resolution)
+
+处理法条竞合、证据矛盾、争点优先级、法源冲突——几乎所有复杂法律分析都会触及的核心枢纽。
 
 <br>
 
@@ -169,17 +209,29 @@
 
 > **理论依据** 风险评估理论 · 预防原则 · 决策理论 · 法哲学(自然法/实证主义/现实主义)· 比例原则(适当性、必要性、均衡性三阶)· 公共利益理论
 
-[<img src="./assets/tag-dispute-and-performance-risk.svg" alt="dispute-and-performance-risk" height="30">](./skills/dispute-and-performance-risk) — 评估合同/交易中"是否会产生法律纠纷"与"是否存在违约风险",输出结构化风险清单与应对建议。
+[<img src="./assets/tag-dispute-and-performance-risk.svg" alt="dispute-and-performance-risk" height="30">](./skills/dispute-and-performance-risk) 
 
-[<img src="./assets/tag-internal-compliance-risk-identification.svg" alt="internal-compliance-risk-identification" height="30">](./skills/internal-compliance-risk-identification) — 系统审查企业内部合规体系,覆盖制度完整性、流程控制有效性、个人信息保护三大维度。
+评估合同/交易中"是否会产生法律纠纷"与"是否存在违约风险",输出结构化风险清单与应对建议。
 
-[<img src="./assets/tag-legal-risk-assessment.svg" alt="legal-risk-assessment" height="30">](./skills/legal-risk-assessment) — 从许可资质、监管法规遵循及历史处罚记录维度,评估企业面临的监管处罚风险。
+[<img src="./assets/tag-internal-compliance-risk-identification.svg" alt="internal-compliance-risk-identification" height="30">](./skills/internal-compliance-risk-identification)
 
-[<img src="./assets/tag-judicial-value-judgment.svg" alt="judicial-value-judgment" height="30">](./skills/judicial-value-judgment) — 辅助法官在权利冲突、法律不确定、比例原则审查等场景中,进行可审查、可论证的价值判断。
+系统审查企业内部合规体系,覆盖制度完整性、流程控制有效性、个人信息保护三大维度。
 
-[<img src="./assets/tag-administrative-value-judgment.svg" alt="administrative-value-judgment" height="30">](./skills/administrative-value-judgment) — 辅助行政机关工作人员按行政法基本原则进行价值判断、利益衡量,形成倾向性裁量结论。
+[<img src="./assets/tag-legal-risk-assessment.svg" alt="legal-risk-assessment" height="30">](./skills/legal-risk-assessment)
 
-[<img src="./assets/tag-legal-judgment-prediction.svg" alt="legal-judgment-prediction" height="30">](./skills/legal-judgment-prediction) — **复合能力 ✦**:调度 8 个原子能力,预测罪名、适用法条、刑期及量刑情节,输出含置信度的结构化报告。
+从许可资质、监管法规遵循及历史处罚记录维度,评估企业面临的监管处罚风险。
+
+[<img src="./assets/tag-judicial-value-judgment.svg" alt="judicial-value-judgment" height="30">](./skills/judicial-value-judgment)
+
+辅助法官在权利冲突、法律不确定、比例原则审查等场景中,进行可审查、可论证的价值判断。
+
+[<img src="./assets/tag-administrative-value-judgment.svg" alt="administrative-value-judgment" height="30">](./skills/administrative-value-judgment)
+
+辅助行政机关工作人员按行政法基本原则进行价值判断、利益衡量,形成倾向性裁量结论。
+
+[<img src="./assets/tag-legal-judgment-prediction.svg" alt="legal-judgment-prediction" height="30">](./skills/legal-judgment-prediction) 
+
+**复合能力 ✦**:调度 8 个原子能力,预测罪名、适用法条、刑期及量刑情节,输出含置信度的结构化报告。
 
 <img src="./assets/rule.svg" alt="" width="100%">
 
@@ -189,13 +241,21 @@
 
 > **理论依据** Dung 抽象论辩框架(以攻击关系有向图量化论证强度)· 论证图式(附批判性问题)· Toulmin 论证模型(六要素、可废止性)· 多属性效用决策理论
 
-[<img src="./assets/tag-argument-chain-construction.svg" alt="argument-chain-construction" height="30">](./skills/argument-chain-construction) — 将推理结果组织为完整、自洽、有说服力的论证结构,用于意见书、代理词、辩护词等。
+[<img src="./assets/tag-argument-chain-construction.svg" alt="argument-chain-construction" height="30">](./skills/argument-chain-construction)
 
-[<img src="./assets/tag-argument-strength-evaluation.svg" alt="argument-strength-evaluation" height="30">](./skills/argument-strength-evaluation) — 对一段已完成的推理作自我评估,给出强度/置信度评级,识别并标注链条中的薄弱环节。
+将推理结果组织为完整、自洽、有说服力的论证结构,用于意见书、代理词、辩护词等。
 
-[<img src="./assets/tag-evidence-argument-chain.svg" alt="evidence-argument-chain" height="30">](./skills/evidence-argument-chain) — 建立"主张→要件→证据→证明力评估"的完整映射,确保每个主张有充分证据、每项证据有明确目的。
+[<img src="./assets/tag-argument-strength-evaluation.svg" alt="argument-strength-evaluation" height="30">](./skills/argument-strength-evaluation) 
 
-[<img src="./assets/tag-strategic-risk-prioritization.svg" alt="strategic-risk-prioritization" height="30">](./skills/strategic-risk-prioritization) — 按发生概率与影响程度对多个风险点系统排序,帮助决策者在有限资源下作战略性取舍。
+对一段已完成的推理作自我评估,给出强度/置信度评级,识别并标注链条中的薄弱环节。
+
+[<img src="./assets/tag-evidence-argument-chain.svg" alt="evidence-argument-chain" height="30">](./skills/evidence-argument-chain)
+
+建立"主张→要件→证据→证明力评估"的完整映射,确保每个主张有充分证据、每项证据有明确目的。
+
+[<img src="./assets/tag-strategic-risk-prioritization.svg" alt="strategic-risk-prioritization" height="30">](./skills/strategic-risk-prioritization)
+
+按发生概率与影响程度对多个风险点系统排序,帮助决策者在有限资源下作战略性取舍。
 
 <br>
 
@@ -203,21 +263,37 @@
 
 > **理论依据** 言语行为理论(确保文书言外行为效力准确)· AGM 信念修正理论 · 规范变更逻辑 · 运筹学与调度理论 · 法律信息降维与压缩理论
 
-[<img src="./assets/tag-legal-document-formatting.svg" alt="legal-document-formatting" height="30">](./skills/legal-document-formatting) — 基于人民法院裁判文书制作规范,起草完整的民事/刑事判决书,起草中自主调用原子技能。
+[<img src="./assets/tag-legal-document-formatting.svg" alt="legal-document-formatting" height="30">](./skills/legal-document-formatting)
 
-[<img src="./assets/tag-judgment-document-generation.svg" alt="judgment-document-generation" height="30">](./skills/judgment-document-generation) — **复合能力 ✦**:调度同一组原子能力,生成格式规范、论证严密的完整刑事判决书。
+基于人民法院裁判文书制作规范,起草完整的民事/刑事判决书,起草中自主调用原子技能。
 
-[<img src="./assets/tag-legal-document-summarization.svg" alt="legal-document-summarization" height="30">](./skills/legal-document-summarization) — 对判决/裁定/调解/仲裁/行政处罚等文书作结构化摘要,忠实原文、客观、突出核心、避免复述全文。
+[<img src="./assets/tag-judgment-document-generation.svg" alt="judgment-document-generation" height="30">](./skills/judgment-document-generation) 
 
-[<img src="./assets/tag-multi-document-summarization.svg" alt="multi-document-summarization" height="30">](./skills/multi-document-summarization) — 跨多份文档综合分析,提取共同观点、识别冲突、生成统一概览与新的综合性洞见。
+**复合能力 ✦**:调度同一组原子能力,生成格式规范、论证严密的完整刑事判决书。
 
-[<img src="./assets/tag-legal-terminology.svg" alt="legal-terminology" height="30">](./skills/legal-terminology) — 确保法律文本术语措辞准确、无歧义、符合法律文体;贯穿所有法律文本生产环节的基础原子能力。
+[<img src="./assets/tag-legal-document-summarization.svg" alt="legal-document-summarization" height="30">](./skills/legal-document-summarization) 
 
-[<img src="./assets/tag-case-lifecycle-planning.svg" alt="case-lifecycle-planning" height="30">](./skills/case-lifecycle-planning) — 规划案件准备时间线,生成诉讼路线图与关键时间一览表。
+对判决/裁定/调解/仲裁/行政处罚等文书作结构化摘要，忠实原文、客观、突出核心、避免复述全文。
 
-[<img src="./assets/tag-trial-scheduling-and-deadline-monitoring.svg" alt="trial-scheduling-and-deadline-monitoring" height="30">](./skills/trial-scheduling-and-deadline-monitoring) — 跟踪并提醒开庭/执行排期、证据提交、上诉、送达、保全续保等各项法定期限。
+[<img src="./assets/tag-multi-document-summarization.svg" alt="multi-document-summarization" height="30">](./skills/multi-document-summarization) 
 
-[<img src="./assets/tag-billing-and-litigation-budget.svg" alt="billing-and-litigation-budget" height="30">](./skills/billing-and-litigation-budget) — 统计律师工时与各类费用,编制与监控预算,进行诉讼经济性分析,出具工时单/费用单。
+跨多份文档综合分析,提取共同观点、识别冲突、生成统一概览与新的综合性洞见。
+
+[<img src="./assets/tag-legal-terminology.svg" alt="legal-terminology" height="30">](./skills/legal-terminology)
+
+确保法律文本术语措辞准确、无歧义、符合法律文体;贯穿所有法律文本生产环节的基础原子能力。
+
+[<img src="./assets/tag-case-lifecycle-planning.svg" alt="case-lifecycle-planning" height="30">](./skills/case-lifecycle-planning)
+
+规划案件准备时间线,生成诉讼路线图与关键时间一览表。
+
+[<img src="./assets/tag-trial-scheduling-and-deadline-monitoring.svg" alt="trial-scheduling-and-deadline-monitoring" height="30">](./skills/trial-scheduling-and-deadline-monitoring)
+
+跟踪并提醒开庭/执行排期、证据提交、上诉、送达、保全续保等各项法定期限。
+
+[<img src="./assets/tag-billing-and-litigation-budget.svg" alt="billing-and-litigation-budget" height="30">](./skills/billing-and-litigation-budget)
+
+统计律师工时与各类费用,编制与监控预算,进行诉讼经济性分析,出具工时单/费用单。
 
 <img src="./assets/rule.svg" alt="" width="100%">
 
