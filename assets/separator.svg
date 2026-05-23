@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 28" width="1200" height="28" role="img" aria-label="separator">
+  <defs><linearGradient id="ln" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#b08d57" stop-opacity="0"/><stop offset="0.5" stop-color="#d8b988" stop-opacity="0.9"/><stop offset="1" stop-color="#b08d57" stop-opacity="0"/>
+  </linearGradient></defs>
+  <line x1="120" y1="14" x2="1080" y2="14" stroke="url(#ln)" stroke-width="1.4"/>
+  <g transform="translate(600,14)">
+    <circle r="9" fill="none" stroke="#c0392b" stroke-width="1.6">
+      <animate attributeName="r" values="6;9;6" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3.2" fill="#e05a4a"/>
+    <path d="M-22 0 L-12 0 M12 0 L22 0" stroke="#d8b988" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+</svg>
