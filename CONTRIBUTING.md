@@ -17,7 +17,7 @@
 ### 路径 B · Pull Request(熟悉 Git 者)
 
 1. Fork 本仓库。
-2. 在仓库根目录新建一个以技能 **slug** 命名的目录(全小写、连字符分隔,例如 `contract-clause-extraction`)。
+2. 在 `skills/` 目录下新建一个以技能 **slug** 命名的目录(全小写、连字符分隔,例如 `contract-clause-extraction`)。
 3. 在该目录内创建 `SKILL.md`。
 4. 提交 PR,并在描述中简述该技能解决什么问题、面向什么场景。
 
