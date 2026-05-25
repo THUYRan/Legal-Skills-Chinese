@@ -382,15 +382,46 @@
 4. ⚠️ 每一份输出都应经执业法律专业人员审阅后方可使用
 ```
 
+### 🔌 接入真实数据库 · External Data via MCP
+
+本库的检索类技能(`case-retrieval` · `legal-article-retrieval` · `legal-norm-validity-check`)**只定义检索方法论,不绑定任何数据库**。要让它们检索到**真实、现行、可溯源**的案例与法条(而非凭模型记忆),需为运行环境接入一个兼容 [MCP](https://modelcontextprotocol.io) 的法律数据服务。
+
+技能对接口的要求极简——**只需环境中存在一个"输入检索词、返回结构化结果"的工具即可**,因此任何案例/法规库都可替换。目前已验证可用的是 **[北大法宝 MCP](https://mcp.pkulaw.com)**(1.6 亿+ 案例、500 万+ 法规)。配置只是在 MCP 客户端里加一个标准 Server:
+
+```json
+{
+  "mcpServers": {
+    "pkulaw": {
+      "url": "https://apim-gw.pkulaw.com/{SERVICE_ID}/mcp",
+      "headers": { "Authorization": "Bearer YOUR_TOKEN" }
+    }
+  }
+}
+```
+
+> Token 与 `SERVICE_ID` 在 [mcp.pkulaw.com 控制台](https://mcp.pkulaw.com/console/apps) 获取,**只配置在你本地的客户端,切勿写进 SKILL.md 或提交到仓库**。
+> 全部服务、链接与接入步骤见 [`MCP-PKULAW.md`](./MCP-PKULAW.md);各技能的接入契约见对应目录下的 `README.md`。
+> ⚠️ 未接入任何数据库时,技能仍可运行,但所有案例/法条须标注 `[待检索]`/`[待查]`,绝不编造。
+
 **目录结构:**
 
 ```text
 Legal-Skills-Chinese/
 ├── README.md
 ├── CONTRIBUTING.md
+├── MCP-PKULAW.md             # ← 北大法宝 MCP 全部服务与链接总表
 ├── assets/                   # README 视觉资产(banner、类别标签、技能标签 SVG)
 ├── skills/                   # 全部 38 个技能
-│   ├── <技能名>/
+│   ├── case-retrieval/
+│   │   ├── SKILL.md          # 检索方法论(不绑定数据库)
+│   │   └── README.md         # ← 北大法宝 MCP 接入说明(案例库)
+│   ├── legal-article-retrieval/
+│   │   ├── SKILL.md
+│   │   └── README.md         # ← 接入说明(法规库)
+│   ├── legal-norm-validity-check/
+│   │   ├── SKILL.md
+│   │   └── README.md         # ← 接入说明(法条溯源/修正幻觉)
+│   ├── <其他技能名>/
 │   │   └── SKILL.md          # 每个技能一个目录,一个 SKILL.md
 │   └── ...
 └── .github/ISSUE_TEMPLATE/
