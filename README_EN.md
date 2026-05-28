@@ -481,7 +481,7 @@ Thanks to the Anthropic team for open-sourcing the Agent Skills standard and exa
 
 ## 👥 Team
 
-Huyiran, Cheng Rongxin, Li Haitao, Lv Wenbo, Chen Qingjing, Liu Huanghai, Xu Jing, Jiang Fuheng, Wu Xuanhang, Wang Xinyu, Wang Chong, Que Zibing
+Hu Yiran, Cheng Rongxin, Li Haitao, Lv Wenbo, Chen Qingjing, Liu Huanghai, Xu Jing, Jiang Fuheng, Wu Xuanhang, Wang Xinyu, Wang Chong, Que Zibing
 
 Contact email: huyr17@outlook.com
 
