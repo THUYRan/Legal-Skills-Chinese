@@ -81,11 +81,6 @@ Provide concrete examples:
 
 5. 结论：数据质量瑕疵责任可以借鉴买卖合同瑕疵担保规则，但不能简单等同于物的瑕疵责任。其规范评价应围绕数据是否满足合同目的、使用场景和持续供给义务展开。
 
-## Scripts (if applicable)
-
-- `normative_meaning_analysis.py`：用于按照“规范目的—评价对象—事实相关性—涵摄限度—结论”的结构生成初步法律论证框架。
-
-- `fact_norm_mapping.py`：用于将案件事实拆分为规范相关事实、辅助事实和无关事实，并建立事实与规范目的之间的对应关系。
 
 ## Best Practices
 
