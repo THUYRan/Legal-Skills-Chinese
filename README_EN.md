@@ -21,6 +21,7 @@
 
 [Skill Index](#-skill-index) ·
 [Design Philosophy](#-design-philosophy) ·
+[Installation](#-installation) ·
 [Benchmark Coverage](#-benchmark-coverage) ·
 [Usage](#-usage) ·
 [Submit a New Skill](#-submit-a-new-skill)
@@ -76,6 +77,37 @@ Fact element extraction → Concept comprehension → Issue identification → S
 Each `SKILL.md` includes: **trigger conditions · capability boundaries · operational steps · input/output format · legal disclaimer**. Compound abilities explicitly state which atomic abilities they call and in what order.
 
 > 💡 **Why emphasize "hand‑written"?** These skills are individually authored and validated by practicing legal professionals to match Chinese legal reasoning and practice standards, rather than being generic, model-generated prompts.
+
+<img src="./assets/rule.svg" alt="" width="100%">
+
+## 📦 Installation
+
+### One‑click install (recommended)
+
+```bash
+npx skills add THUYRan/Legal-Skills-Chinese --all
+```
+
+Installs all 38 skills at once. You can also run the following to pick skills from an interactive checklist:
+
+```bash
+npx skills add THUYRan/Legal-Skills-Chinese
+```
+
+Or install specific skills by name:
+
+```bash
+npx skills add THUYRan/Legal-Skills-Chinese --skill deductive-reasoning --skill case-retrieval
+```
+
+### Manual install
+
+```bash
+git clone https://github.com/THUYRan/Legal-Skills-Chinese.git
+cp -r skills/<skill-dir> /path/to/your/.claude/skills/
+```
+
+See [Usage](#-usage) below for how to invoke the skills after installation.
 
 <img src="./assets/rule.svg" alt="" width="100%">
 
