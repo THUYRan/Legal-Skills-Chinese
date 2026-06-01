@@ -21,6 +21,7 @@
 
 [技能总览](#-技能总览--skill-index) ·
 [设计理念](#-设计理念--design-philosophy) ·
+[安装](#-安装--installation) ·
 [评测覆盖](#-覆盖的评测任务--benchmark-coverage) ·
 [使用方式](#-使用方式--usage) ·
 [贡献技能](#-贡献--submit-a-new-skill)
@@ -76,6 +77,37 @@
 每个 `SKILL.md` 都自带:**触发条件 · 能力边界 · 操作步骤 · 输入/输出格式 · 法律声明**。复合能力会显式说明它调用了哪些原子能力以及调用顺序。
 
 > 💡 **为什么强调"手写"?** 这些技能均由执业法律专业人员逐一手写并验证,力求精确贴合中国法律的推理逻辑与实务规范,而非由模型自动生成的泛化提示词。
+
+<img src="./assets/rule.svg" alt="" width="100%">
+
+## 📦 安装 · Installation
+
+### 一键安装（推荐）
+
+```bash
+npx skills add THUYRan/Legal-Skills-Chinese --all
+```
+
+一次性安装全部 38 个技能。也可以运行以下命令，通过可视化列表勾选你需要的技能：
+
+```bash
+npx skills add THUYRan/Legal-Skills-Chinese
+```
+
+或直接指定技能名安装：
+
+```bash
+npx skills add THUYRan/Legal-Skills-Chinese --skill deductive-reasoning --skill case-retrieval
+```
+
+### 手动安装
+
+```bash
+git clone https://github.com/THUYRan/Legal-Skills-Chinese.git
+cp -r skills/<技能目录> /path/to/your/.claude/skills/
+```
+
+安装完成后，参见下方的 [使用方式](#-使用方式--usage) 了解如何调用。
 
 <img src="./assets/rule.svg" alt="" width="100%">
 
