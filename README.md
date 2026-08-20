@@ -165,7 +165,7 @@
 
 目的解释:当文义解释无法择一时,发现并论证条文目的,在文本可承受范围内选择最正当的含义。
 
-[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/Normative-Meaning-Argumentation)
+[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/normative-meaning-argumentation)
 
 分析规范的目的与价值导向,判断事实如何进入规范评价及涵摄的限度。
 
@@ -187,7 +187,7 @@
 
 在法律漏洞情形下,识别相似性基础(tertium comparationis),论证类比正当性,得出结论。
 
-[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/Legal-Abductive-Reasoning)
+[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/legal-abductive-reasoning)
 
 在证据不完整、事实模糊时生成并评估最合理的解释性假设;结合米尔五法进行结构化因果推断。
 
