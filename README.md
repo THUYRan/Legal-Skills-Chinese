@@ -9,15 +9,15 @@
 <div align="center">
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/Skills-38-3a5a8c.svg?style=flat-square)](#-技能总览--skill-index)
-[![Atomic + Compound](https://img.shields.io/badge/原子%20×36-+%20复合%20×2-5b606b.svg?style=flat-square)](#-设计理念--design-philosophy)
+[![Skills](https://img.shields.io/badge/Skills-39-3a5a8c.svg?style=flat-square)](#-技能总览--skill-index)
+[![Atomic + Compound](https://img.shields.io/badge/原子%20×37-+%20复合%20×2-5b606b.svg?style=flat-square)](#-设计理念--design-philosophy)
 [![Jurisdiction](https://img.shields.io/badge/法域-中国大陆成文法-b5462f.svg?style=flat-square)](#-免责声明--disclaimer)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-3f7d6e.svg?style=flat-square)](#-贡献--submit-a-new-skill)
 [![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-9aa0ab.svg?style=flat-square)](#-许可与责任--license)
 
-**38 个由执业法律专业人员手写并验证的法律推理技能(Agent Skills),覆盖检索 → 推理 → 论证 → 文书的完整链条。**
+**39 个由执业法律专业人员手写并验证的法律推理技能(Agent Skills),覆盖检索 → 推理 → 论证 → 文书的完整链条。**
 
-*A curated library of 38 hand-crafted, lawyer-verified legal reasoning skills for PRC statutory law.*
+*A curated library of 39 hand-crafted, lawyer-verified legal reasoning skills for PRC statutory law.*
 
 [技能总览](#-技能总览--skill-index) ·
 [设计理念](#-设计理念--design-philosophy) ·
@@ -48,7 +48,7 @@
 <tr>
 <td width="50%" valign="top">
 
-#### 🧩 原子能力 × 36
+#### 🧩 原子能力 × 37
 
 每个技能只做一件事:检索一条法条、提取一组要素、完成一次演绎、评估一段论证的强度。
 
@@ -81,12 +81,12 @@
 
 ## 📚 技能总览 · Skill Index
 
-38 个技能按功能分为 **7 类**,对应法律工作的「输入 → 处理 → 输出」三层。
+39 个技能按功能分为 **7 类**,对应法律工作的「输入 → 处理 → 输出」三层。
 
 | 类别 | <span style="white-space:nowrap">数量</span> | 技能 |
 |:---|:---:|:---|
 | <span style="white-space:nowrap">**01 · 信息检索**</span> | 5 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` |
-| <span style="white-space:nowrap">**02 · 事实与要素处理**</span> | 4 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
+| <span style="white-space:nowrap">**02 · 事实与要素处理**</span> | 5 | `client-interview-and-clarification` · `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
 | <span style="white-space:nowrap">**03 · 法律解释**</span> | 4 | `legal-interpretation-argument` · `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` |
 | <span style="white-space:nowrap">**04 · 法律推理**</span> | 7 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` |
 | <span style="white-space:nowrap">**05 · 论证组织与评估**</span> | 4 | `argument-chain-construction` · `argument-strength-evaluation` · `evidence-argument-chain` · `strategic-risk-prioritization` |
@@ -127,7 +127,11 @@
 
 <img src="./assets/cat-2-facts.svg" alt="事实与要素处理" height="38">
 
-> **理论依据** 认识论(事实认定的哲学基础)· 构成要件理论 · 证据可采性理论(相关性、真实性、合法性)
+> **理论依据** 认识论(事实认定的哲学基础)· 构成要件理论 · 证据可采性理论(相关性、真实性、合法性) · 认知访谈理论
+
+[<img src="./assets/tag-client-interview-and-clarification.svg" alt="client-interview-and-clarification" height="30">](./skills/client-interview-and-clarification)
+
+针对模糊、碎片或要件缺失的案情叙述，识别事实缺口，以通俗引导式发问向当事人追问关键事实与证据线索。
 
 [<img src="./assets/tag-legal-element-extraction.svg" alt="legal-element-extraction" height="30">](./skills/legal-element-extraction)
 
