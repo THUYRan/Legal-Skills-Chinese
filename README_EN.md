@@ -165,7 +165,7 @@ Systematic interpretation: interpret provisions in light of their position and r
 
 Purposive interpretation: when textual meaning is indeterminate, discover and justify the statutory purpose and choose the most legitimate meaning within the text's tolerable range.
 
-[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/Normative-Meaning-Argumentation)
+[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/normative-meaning-argumentation)
 
 Analyze a norm's purposes and value orientation, determining how facts enter normative evaluation and the limits of normative subsumption.
 
@@ -187,7 +187,7 @@ Generalize rules, decisional patterns, or principles from one or multiple concre
 
 Where statutory gaps exist, identify the basis of similarity (tertium comparationis), justify analogical reasoning, and draw conclusions.
 
-[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/Legal-Abductive-Reasoning)
+[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/legal-abductive-reasoning)
 
 Generate and evaluate the most reasonable explanatory hypotheses when evidence is incomplete or facts are unclear; combine with Mill's methods for structured causal inference.
 
