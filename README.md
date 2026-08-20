@@ -9,15 +9,15 @@
 <div align="center">
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/Skills-41-3a5a8c.svg?style=flat-square)](#-技能总览--skill-index)
-[![Atomic + Compound](https://img.shields.io/badge/原子%20×39-+%20复合%20×2-5b606b.svg?style=flat-square)](#-设计理念--design-philosophy)
+[![Skills](https://img.shields.io/badge/Skills-44-3a5a8c.svg?style=flat-square)](#-技能总览--skill-index)
+[![Atomic + Compound](https://img.shields.io/badge/原子%20×42-+%20复合%20×2-5b606b.svg?style=flat-square)](#-设计理念--design-philosophy)
 [![Jurisdiction](https://img.shields.io/badge/法域-中国大陆成文法-b5462f.svg?style=flat-square)](#-免责声明--disclaimer)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-3f7d6e.svg?style=flat-square)](#-贡献--submit-a-new-skill)
 [![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-9aa0ab.svg?style=flat-square)](#-许可与责任--license)
 
-**41 个由执业法律专业人员手写并验证的法律推理技能(Agent Skills),覆盖检索 → 推理 → 论证 → 文书的完整链条。**
+**44 个由执业法律专业人员手写并验证的法律推理技能(Agent Skills),覆盖检索 → 推理 → 论证 → 文书的完整链条。**
 
-*A curated library of 41 hand-crafted, lawyer-verified legal reasoning skills for PRC statutory law.*
+*A curated library of 44 hand-crafted, lawyer-verified legal reasoning skills for PRC statutory law.*
 
 [技能总览](#-技能总览--skill-index) ·
 [设计理念](#-设计理念--design-philosophy) ·
@@ -48,7 +48,7 @@
 <tr>
 <td width="50%" valign="top">
 
-#### 🧩 原子能力 × 39
+#### 🧩 原子能力 × 42
 
 每个技能只做一件事:检索一条法条、提取一组要素、完成一次演绎、评估一段论证的强度。
 
@@ -81,17 +81,17 @@
 
 ## 📚 技能总览 · Skill Index
 
-41 个技能按功能分为 **7 类**,对应法律工作的「输入 → 处理 → 输出」三层。
+44 个技能按功能分为 **7 类**,对应法律工作的「输入 → 处理 → 输出」三层。
 
 | 类别 | <span style="white-space:nowrap">数量</span> | 技能 |
 |:---|:---:|:---|
 | <span style="white-space:nowrap">**01 · 信息检索**</span> | 6 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` · `legal-kb-curation` |
-| <span style="white-space:nowrap">**02 · 事实与要素处理**</span> | 5 | `client-interview-and-clarification` · `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
+| <span style="white-space:nowrap">**02 · 事实与要素处理**</span> | 6 | `client-interview-and-clarification` · `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` · `labor-dispute-claim-calculation` |
 | <span style="white-space:nowrap">**03 · 法律解释**</span> | 4 | `legal-interpretation-argument` · `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` |
-| <span style="white-space:nowrap">**04 · 法律推理**</span> | 7 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` |
+| <span style="white-space:nowrap">**04 · 法律推理**</span> | 8 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` · `liquidated-damages-adjustment-analysis` |
 | <span style="white-space:nowrap">**05 · 论证组织与评估**</span> | 4 | `argument-chain-construction` · `argument-strength-evaluation` · `evidence-argument-chain` · `strategic-risk-prioritization` |
 | <span style="white-space:nowrap">**06 · 风险评估与价值判断**</span> | 7 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `crisis-simulation-and-contingency` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction` ✦ |
-| <span style="white-space:nowrap">**07 · 文书与事务管理**</span> | 8 | `legal-document-formatting` · `judgment-document-generation` ✦ · `legal-document-summarization` · `multi-document-summarization` · `legal-terminology` · `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` |
+| <span style="white-space:nowrap">**07 · 文书与事务管理**</span> | 9 | `legal-document-formatting` · `judgment-document-generation` ✦ · `legal-document-summarization` · `multi-document-summarization` · `legal-terminology` · `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` · `enforcement-property-clue-mining` |
 
 > ✦ 标记为**复合能力**:`legal-judgment-prediction` 与 `judgment-document-generation` 在功能上分别归入「风险评估/预测」与「文书」类,但实现上是调度其他原子能力的编排层。
 
@@ -153,6 +153,10 @@
 
 对证据的真实性、合法性、关联性("三性")及证明力评估,判断可采性、证明标准、补强建议与非法证据排除。
 
+[<img src="./assets/tag-labor-dispute-claim-calculation.svg" alt="labor-dispute-claim-calculation" height="30">](./skills/labor-dispute-claim-calculation)
+
+精准核算劳动争议经济补偿金(N/N+1/2N)、未签合同双倍工资、加班费与年休假折薪，判定仲裁时效。
+
 <img src="./assets/rule.svg" alt="" width="100%">
 
 <img src="./assets/layer-2-process.svg" alt="PROCESS · 处理层" width="100%">
@@ -210,6 +214,10 @@
 [<img src="./assets/tag-conflict-resolution.svg" alt="conflict-resolution" height="30">](./skills/conflict-resolution)
 
 处理法条竞合、证据矛盾、争点优先级、法源冲突——几乎所有复杂法律分析都会触及的核心枢纽。
+
+[<img src="./assets/tag-liquidated-damages-adjustment-analysis.svg" alt="liquidated-damages-adjustment-analysis" height="30">](./skills/liquidated-damages-adjustment-analysis)
+
+依据《民法典合同编通则解释》评估违约金是否超出实际损失30%，构建司法调低/调高抗辩论证体系。
 
 <br>
 
@@ -306,6 +314,10 @@
 [<img src="./assets/tag-billing-and-litigation-budget.svg" alt="billing-and-litigation-budget" height="30">](./skills/billing-and-litigation-budget)
 
 统计律师工时与各类费用,编制与监控预算,进行诉讼经济性分析,出具工时单/费用单。
+
+[<img src="./assets/tag-enforcement-property-clue-mining.svg" alt="enforcement-property-clue-mining" height="30">](./skills/enforcement-property-clue-mining)
+
+排查被执行人隐性财产线索，运用一人公司财产混同及股东出资加速到期等规则穿透追加被执行人。
 
 <img src="./assets/rule.svg" alt="" width="100%">
 
@@ -423,7 +435,7 @@ Legal-Skills-Chinese/
 ├── CONTRIBUTING.md
 ├── MCP-PKULAW.md             # ← 北大法宝 MCP 全部服务与链接总表
 ├── assets/                   # README 视觉资产(banner、类别标签、技能标签 SVG)
-├── skills/                   # 全部 41 个技能
+├── skills/                   # 全部 44 个技能
 │   ├── case-retrieval/
 │   │   ├── SKILL.md          # 检索方法论(不绑定数据库)
 │   │   └── README.md         # ← 北大法宝 MCP 接入说明(案例库)
