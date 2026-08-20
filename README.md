@@ -9,15 +9,15 @@
 <div align="center">
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/Skills-38-3a5a8c.svg?style=flat-square)](#-技能总览--skill-index)
-[![Atomic + Compound](https://img.shields.io/badge/原子%20×36-+%20复合%20×2-5b606b.svg?style=flat-square)](#-设计理念--design-philosophy)
+[![Skills](https://img.shields.io/badge/Skills-41-3a5a8c.svg?style=flat-square)](#-技能总览--skill-index)
+[![Atomic + Compound](https://img.shields.io/badge/原子%20×39-+%20复合%20×2-5b606b.svg?style=flat-square)](#-设计理念--design-philosophy)
 [![Jurisdiction](https://img.shields.io/badge/法域-中国大陆成文法-b5462f.svg?style=flat-square)](#-免责声明--disclaimer)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-3f7d6e.svg?style=flat-square)](#-贡献--submit-a-new-skill)
 [![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-9aa0ab.svg?style=flat-square)](#-许可与责任--license)
 
-**38 个由执业法律专业人员手写并验证的法律推理技能(Agent Skills),覆盖检索 → 推理 → 论证 → 文书的完整链条。**
+**41 个由执业法律专业人员手写并验证的法律推理技能(Agent Skills),覆盖检索 → 推理 → 论证 → 文书的完整链条。**
 
-*A curated library of 38 hand-crafted, lawyer-verified legal reasoning skills for PRC statutory law.*
+*A curated library of 41 hand-crafted, lawyer-verified legal reasoning skills for PRC statutory law.*
 
 [技能总览](#-技能总览--skill-index) ·
 [设计理念](#-设计理念--design-philosophy) ·
@@ -48,7 +48,7 @@
 <tr>
 <td width="50%" valign="top">
 
-#### 🧩 原子能力 × 36
+#### 🧩 原子能力 × 39
 
 每个技能只做一件事:检索一条法条、提取一组要素、完成一次演绎、评估一段论证的强度。
 
@@ -81,16 +81,16 @@
 
 ## 📚 技能总览 · Skill Index
 
-38 个技能按功能分为 **7 类**,对应法律工作的「输入 → 处理 → 输出」三层。
+41 个技能按功能分为 **7 类**,对应法律工作的「输入 → 处理 → 输出」三层。
 
 | 类别 | <span style="white-space:nowrap">数量</span> | 技能 |
 |:---|:---:|:---|
-| <span style="white-space:nowrap">**01 · 信息检索**</span> | 5 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` |
-| <span style="white-space:nowrap">**02 · 事实与要素处理**</span> | 4 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
+| <span style="white-space:nowrap">**01 · 信息检索**</span> | 6 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` · `legal-kb-curation` |
+| <span style="white-space:nowrap">**02 · 事实与要素处理**</span> | 5 | `client-interview-and-clarification` · `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
 | <span style="white-space:nowrap">**03 · 法律解释**</span> | 4 | `legal-interpretation-argument` · `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` |
 | <span style="white-space:nowrap">**04 · 法律推理**</span> | 7 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` |
 | <span style="white-space:nowrap">**05 · 论证组织与评估**</span> | 4 | `argument-chain-construction` · `argument-strength-evaluation` · `evidence-argument-chain` · `strategic-risk-prioritization` |
-| <span style="white-space:nowrap">**06 · 风险评估与价值判断**</span> | 6 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction` ✦ |
+| <span style="white-space:nowrap">**06 · 风险评估与价值判断**</span> | 7 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `crisis-simulation-and-contingency` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction` ✦ |
 | <span style="white-space:nowrap">**07 · 文书与事务管理**</span> | 8 | `legal-document-formatting` · `judgment-document-generation` ✦ · `legal-document-summarization` · `multi-document-summarization` · `legal-terminology` · `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` |
 
 > ✦ 标记为**复合能力**:`legal-judgment-prediction` 与 `judgment-document-generation` 在功能上分别归入「风险评估/预测」与「文书」类,但实现上是调度其他原子能力的编排层。
@@ -123,11 +123,19 @@
 
 解释、辨析、拆解法律概念,分析构成要件与法律效果,是法律分析的基础单元。
 
+[<img src="./assets/tag-legal-kb-curation.svg" alt="legal-kb-curation" height="30">](./skills/legal-kb-curation)
+
+构建、清洗、切分与治理法律知识库,建立条款级语义分块、效力元数据打标及法规引证图谱。
+
 <br>
 
 <img src="./assets/cat-2-facts.svg" alt="事实与要素处理" height="38">
 
-> **理论依据** 认识论(事实认定的哲学基础)· 构成要件理论 · 证据可采性理论(相关性、真实性、合法性)
+> **理论依据** 认识论(事实认定的哲学基础)· 构成要件理论 · 证据可采性理论(相关性、真实性、合法性) · 认知访谈理论
+
+[<img src="./assets/tag-client-interview-and-clarification.svg" alt="client-interview-and-clarification" height="30">](./skills/client-interview-and-clarification)
+
+针对模糊、碎片或要件缺失的案情叙述，识别事实缺口，以通俗引导式发问向当事人追问关键事实与证据线索。
 
 [<img src="./assets/tag-legal-element-extraction.svg" alt="legal-element-extraction" height="30">](./skills/legal-element-extraction)
 
@@ -165,7 +173,7 @@
 
 目的解释:当文义解释无法择一时,发现并论证条文目的,在文本可承受范围内选择最正当的含义。
 
-[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/Normative-Meaning-Argumentation)
+[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/normative-meaning-argumentation)
 
 分析规范的目的与价值导向,判断事实如何进入规范评价及涵摄的限度。
 
@@ -187,7 +195,7 @@
 
 在法律漏洞情形下,识别相似性基础(tertium comparationis),论证类比正当性,得出结论。
 
-[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/Legal-Abductive-Reasoning)
+[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/legal-abductive-reasoning)
 
 在证据不完整、事实模糊时生成并评估最合理的解释性假设;结合米尔五法进行结构化因果推断。
 
@@ -220,6 +228,10 @@
 [<img src="./assets/tag-legal-risk-assessment.svg" alt="legal-risk-assessment" height="30">](./skills/legal-risk-assessment)
 
 从许可资质、监管法规遵循及历史处罚记录维度,评估企业面临的监管处罚风险。
+
+[<img src="./assets/tag-crisis-simulation-and-contingency.svg" alt="crisis-simulation-and-contingency" height="30">](./skills/crisis-simulation-and-contingency)
+
+推演突发涉法危机(行政调查/财产保全/数据泄露/行刑交叉)的多分支决策树与黄金应急排期。
 
 [<img src="./assets/tag-judicial-value-judgment.svg" alt="judicial-value-judgment" height="30">](./skills/judicial-value-judgment)
 
@@ -411,7 +423,7 @@ Legal-Skills-Chinese/
 ├── CONTRIBUTING.md
 ├── MCP-PKULAW.md             # ← 北大法宝 MCP 全部服务与链接总表
 ├── assets/                   # README 视觉资产(banner、类别标签、技能标签 SVG)
-├── skills/                   # 全部 38 个技能
+├── skills/                   # 全部 41 个技能
 │   ├── case-retrieval/
 │   │   ├── SKILL.md          # 检索方法论(不绑定数据库)
 │   │   └── README.md         # ← 北大法宝 MCP 接入说明(案例库)
@@ -438,7 +450,7 @@ description: |            # 触发条件、适用场景、能力边界
 ---
 ```
 
-> 📝 **关于覆盖范围:** 本库只收录**已实现为 `SKILL.md` 的技能**。原始能力框架中尚有若干设想中的维度(如知识库/法条库构建、客户沟通与澄清式发问、危机预案与多场景模拟)尚未落地,待补齐后再行收录。
+> 📝 **关于覆盖范围:** 本库持续扩展已实现为 `SKILL.md` 的法律推理技能。原始能力框架中规划的“客户沟通与澄清式发问”、“法律知识库构建与治理”及“危机预案与多场景模拟”等核心维度均已完整落地并收录。欢迎社区继续提交垂直实务技能！
 
 <img src="./assets/rule.svg" alt="" width="100%">
 

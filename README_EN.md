@@ -9,15 +9,15 @@
 <div align="center">
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/Skills-38-3a5a8c.svg?style=flat-square)](#-skill-index)
-[![Atomic + Compound](https://img.shields.io/badge/Atomic%20×36-+%20Compound%20×2-5b606b.svg?style=flat-square)](#-design-philosophy)
+[![Skills](https://img.shields.io/badge/Skills-41-3a5a8c.svg?style=flat-square)](#-skill-index)
+[![Atomic + Compound](https://img.shields.io/badge/Atomic%20×39-+%20Compound%20×2-5b606b.svg?style=flat-square)](#-design-philosophy)
 [![Jurisdiction](https://img.shields.io/badge/Jurisdiction-PRC%20Statutory%20Law-b5462f.svg?style=flat-square)](#-disclaimer)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-3f7d6e.svg?style=flat-square)](#-submit-a-new-skill)
 [![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-9aa0ab.svg?style=flat-square)](#-license)
 
-**38 hand-crafted legal reasoning skills (Agent Skills) authored and validated by practicing lawyers, covering the full chain from retrieval → reasoning → argumentation → drafting.**
+**41 hand-crafted legal reasoning skills (Agent Skills) authored and validated by practicing lawyers, covering the full chain from retrieval → reasoning → argumentation → drafting.**
 
-*A curated library of 38 hand-crafted, lawyer-verified legal reasoning skills for PRC statutory law.*
+*A curated library of 41 hand-crafted, lawyer-verified legal reasoning skills for PRC statutory law.*
 
 [Skill Index](#-skill-index) ·
 [Design Philosophy](#-design-philosophy) ·
@@ -48,7 +48,7 @@ This skills library is not a collection of disconnected prompts but a **layered 
 <tr>
 <td width="50%" valign="top">
 
-#### 🧩 Atomic Abilities × 36
+#### 🧩 Atomic Abilities × 39
 
 Each skill does one thing: retrieve a statute, extract a set of elements, perform a deduction, or evaluate an argument's strength.
 
@@ -81,16 +81,16 @@ Each `SKILL.md` includes: **trigger conditions · capability boundaries · opera
 
 ## 📚 Skill Index
 
-38 skills are grouped into **7 categories**, corresponding to the three layers of legal work: Input → Process → Output.
+41 skills are grouped into **7 categories**, corresponding to the three layers of legal work: Input → Process → Output.
 
 | Category | <span style="white-space:nowrap">Count</span> | Skills |
 |:---|:---:|:---|
-| <span style="white-space:nowrap">**01 · Retrieval**</span> | 5 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` |
-| <span style="white-space:nowrap">**02 · Facts & Element Processing**</span> | 4 | `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
+| <span style="white-space:nowrap">**01 · Retrieval**</span> | 6 | `case-retrieval` · `legal-article-retrieval` · `other-legal-retrieval` · `legal-norm-validity-check` · `legal-concept-comprehension` · `legal-kb-curation` |
+| <span style="white-space:nowrap">**02 · Facts & Element Processing**</span> | 5 | `client-interview-and-clarification` · `legal-element-extraction` · `structured-element-extraction` · `dispute-issue-identification` · `evidence-evaluation` |
 | <span style="white-space:nowrap">**03 · Legal Interpretation**</span> | 4 | `legal-interpretation-argument` · `systematic-interpretation` · `teleological-interpretation` · `normative-meaning-argumentation` |
 | <span style="white-space:nowrap">**04 · Legal Reasoning**</span> | 7 | `deductive-reasoning` · `inductive-reasoning` · `analogical-reasoning` · `legal-abductive-reasoning` · `counterfactual-reasoning` · `formal-legal-consequence` · `conflict-resolution` |
 | <span style="white-space:nowrap">**05 · Argument Organization & Evaluation**</span> | 4 | `argument-chain-construction` · `argument-strength-evaluation` · `evidence-argument-chain` · `strategic-risk-prioritization` |
-| <span style="white-space:nowrap">**06 · Risk Assessment & Value Judgment**</span> | 6 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction` ✦ |
+| <span style="white-space:nowrap">**06 · Risk Assessment & Value Judgment**</span> | 7 | `dispute-and-performance-risk` · `internal-compliance-risk-identification` · `legal-risk-assessment` · `crisis-simulation-and-contingency` · `judicial-value-judgment` · `administrative-value-judgment` · `legal-judgment-prediction` ✦ |
 | <span style="white-space:nowrap">**07 · Documents & Case Management**</span> | 8 | `legal-document-formatting` · `judgment-document-generation` ✦ · `legal-document-summarization` · `multi-document-summarization` · `legal-terminology` · `case-lifecycle-planning` · `trial-scheduling-and-deadline-monitoring` · `billing-and-litigation-budget` |
 
 > ✦ Marked as **compound**: `legal-judgment-prediction` and `judgment-document-generation` are categorized under risk/prediction and documents respectively, but they are orchestration layers that call atomic abilities.
@@ -123,11 +123,19 @@ Validate the legal effect of retrieved statutes: current validity, hierarchical 
 
 Explain, distinguish, and decompose legal concepts, analyze constitutive elements and legal effects—this is the foundational unit of legal analysis.
 
+[<img src="./assets/tag-legal-kb-curation.svg" alt="legal-kb-curation" height="30">](./skills/legal-kb-curation)
+
+Construct, clean, chunk, and govern legal knowledge bases, establishing article-level semantic chunking, validity metadata tagging, and statutory citation graphs.
+
 <br>
 
 <img src="./assets/cat-2-facts.svg" alt="Facts & Element Processing" height="38">
 
-> **Theoretical basis**: epistemology (philosophy of fact-finding) · elements-of-offense theory · evidence admissibility (relevance, authenticity, legality)
+> **Theoretical basis**: epistemology (philosophy of fact-finding) · elements-of-offense theory · evidence admissibility (relevance, authenticity, legality) · cognitive interviewing
+
+[<img src="./assets/tag-client-interview-and-clarification.svg" alt="client-interview-and-clarification" height="30">](./skills/client-interview-and-clarification)
+
+Identify fact gaps in vague or incomplete client statements and generate lay, guided clarification questions and evidence collection leads.
 
 [<img src="./assets/tag-legal-element-extraction.svg" alt="legal-element-extraction" height="30">](./skills/legal-element-extraction)
 
@@ -165,7 +173,7 @@ Systematic interpretation: interpret provisions in light of their position and r
 
 Purposive interpretation: when textual meaning is indeterminate, discover and justify the statutory purpose and choose the most legitimate meaning within the text's tolerable range.
 
-[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/Normative-Meaning-Argumentation)
+[<img src="./assets/tag-normative-meaning-argumentation.svg" alt="normative-meaning-argumentation" height="30">](./skills/normative-meaning-argumentation)
 
 Analyze a norm's purposes and value orientation, determining how facts enter normative evaluation and the limits of normative subsumption.
 
@@ -187,7 +195,7 @@ Generalize rules, decisional patterns, or principles from one or multiple concre
 
 Where statutory gaps exist, identify the basis of similarity (tertium comparationis), justify analogical reasoning, and draw conclusions.
 
-[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/Legal-Abductive-Reasoning)
+[<img src="./assets/tag-legal-abductive-reasoning.svg" alt="legal-abductive-reasoning" height="30">](./skills/legal-abductive-reasoning)
 
 Generate and evaluate the most reasonable explanatory hypotheses when evidence is incomplete or facts are unclear; combine with Mill's methods for structured causal inference.
 
@@ -220,6 +228,10 @@ Systematically review corporate compliance frameworks, covering institutional co
 [<img src="./assets/tag-legal-risk-assessment.svg" alt="legal-risk-assessment" height="30">](./skills/legal-risk-assessment)
 
 Assess regulatory penalty risks from licensing, regulatory compliance, and historical penalties dimensions.
+
+[<img src="./assets/tag-crisis-simulation-and-contingency.svg" alt="crisis-simulation-and-contingency" height="30">](./skills/crisis-simulation-and-contingency)
+
+Simulate multi-branch decision trees and golden response schedules for legal emergencies (investigations, asset freezes, data breaches, dual civil-criminal cases).
 
 [<img src="./assets/tag-judicial-value-judgment.svg" alt="judicial-value-judgment" height="30">](./skills/judicial-value-judgment)
 
@@ -411,7 +423,7 @@ Legal-Skills-Chinese/
 ├── CONTRIBUTING.md
 ├── MCP-PKULAW.md             # ← PKULAW MCP services and links
 ├── assets/                   # README visual assets (banner, category labels, skill tags SVG)
-├── skills/                   # all 38 skills
+├── skills/                   # all 41 skills
 │   ├── case-retrieval/
 │   │   ├── SKILL.md          # retrieval methodology (database-agnostic)
 │   │   └── README.md         # ← PKULAW MCP integration notes (case DB)
@@ -438,7 +450,7 @@ description: |            # trigger conditions, applicable scenarios, capability
 ---
 ```
 
-> 📝 **On coverage:** This repository only includes skills that have been implemented as `SKILL.md`. Some conceptual dimensions (knowledge base/statute library construction, clarifying questions for client communication, crisis simulation) are yet to be implemented and will be added later.
+> 📝 **On coverage:** This repository continuously expands hand-crafted legal reasoning skills implemented as `SKILL.md`. All previously planned core dimensions—including client interview & clarification, legal knowledge base curation & governance, and legal crisis simulation & contingency—have now been fully implemented and integrated. Community contributions for specialized practice areas are warmly welcomed!
 
 <img src="./assets/rule.svg" alt="" width="100%">
 
