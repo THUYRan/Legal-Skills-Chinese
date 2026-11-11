@@ -28,6 +28,7 @@
 | **中文读者** · Chinese-speaking readers | **本仓库根目录** ——权威中文源(本页 + [`skills/`](./skills/)) · You are in the right place |
 | **英文读者** · English-speaking readers | **[`English/`](./English/)** 英译平行树 · Full English mirrors of docs and every skill ([landing](./English/README.md)) |
 | **实验验证 / 评测复现** · Experimental validation | **[LegalSkills](https://github.com/MaryHu-YR/LegalSkills/)** · JuDGE + LexEval harness、多 Agent 对比与可复现结果 |
+| **论文** · Paper | **[Lexskill](https://dl.acm.org/doi/abs/10.1145/3799682.3840212)** · 该仓库相关论文 |
 
 > Coding agents: 日常改技能请只动中文源,见 **[AGENTS.md](./AGENTS.md)**。
 
